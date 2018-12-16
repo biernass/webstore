@@ -1,4 +1,4 @@
-package com.mbsoft.webstore.controller;
+package com.mbsoft.webstore.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
