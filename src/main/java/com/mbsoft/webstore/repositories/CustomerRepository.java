@@ -1,11 +1,9 @@
 package com.mbsoft.webstore.repositories;
 
-import com.mbsoft.webstore.entities.Category;
-import com.mbsoft.webstore.entities.Product;
+import com.mbsoft.webstore.entities.Customer;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProductRepository extends CrudRepository<Product, Long> {
-
+public interface CustomerRepository extends CrudRepository<Customer, Long> {
 }

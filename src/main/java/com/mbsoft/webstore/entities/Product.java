@@ -66,8 +66,6 @@ public class Product {
         return discounted;
     }
 
-
-
     public Long getUnitsInStock() {
         return unitsInStock;
     }
@@ -84,4 +82,19 @@ public class Product {
         return condition;
     }
 
+    public void setUnitsInStock(Long unitsInStock) {
+        this.unitsInStock = unitsInStock;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
