@@ -1,12 +1,14 @@
 INSERT INTO products(product_id, category, description, manufacturer, name,unit_price, units_in_stock, discounted)
- VALUES (1, 'ELECTRONICS', 'Opis pierwszego przedmiotu Opis pierwszego przedmiotu','APPLE', 'iPhone 6S',1000, 200, false );
+ VALUES (1, 'SMARTFON', 'Opis pierwszego przedmiotu Opis pierwszego przedmiotu','APPLE', 'iPhone 6S',1000, 200, false );
 
 INSERT INTO products(product_id, category, description, manufacturer, name,unit_price, units_in_stock, discounted)
- VALUES (2, 'ELECTRONICS', 'Opis drugiego przedmiotu Opis drugiego przedmiotu','LG', 'JAKIŚ',1000, 200, false );
+ VALUES (2, 'SMARTFON', 'Opis drugiego przedmiotu Opis drugiego przedmiotu','LG', 'LG Jakiś',1000, 200, false );
 
 INSERT INTO products(product_id, category, description, manufacturer, name,unit_price, units_in_stock, discounted)
- VALUES (3, 'ELECTRONICS', 'Opis trzeciego przedmiotu Opis trzeciego przedmiotu','SAMSUNG', 'GALAXY S9',1000, 200, false );
+ VALUES (3, 'SMARTFON', 'Opis trzeciego przedmiotu Opis trzeciego przedmiotu','SAMSUNG', 'GALAXY S9',1000, 200, false );
 
+INSERT INTO products(product_id, category, description, manufacturer, name,unit_price, units_in_stock, discounted)
+ VALUES (4, 'TABLET', 'Opis czwartego przedmiotu Opis czwartego przedmiotu','SAMSUNG', 'GALAXY NOTE',1500, 200, false );
 
 INSERT INTO address(address_id, street, number, city, zip_code)
  VALUES (1, 'Księcia Janusza', 14, 'Warszawa', '03-289');

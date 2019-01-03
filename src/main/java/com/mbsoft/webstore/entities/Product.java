@@ -85,6 +85,10 @@ public class Product {
     public void setUnitsInStock(Long unitsInStock) {
         this.unitsInStock = unitsInStock;
     }
+
+    public Category getCategory() {
+        return category;
+    }
 }
 
 
