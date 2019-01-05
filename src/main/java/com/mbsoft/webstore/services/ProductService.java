@@ -3,6 +3,7 @@ package com.mbsoft.webstore.services;
 import com.mbsoft.webstore.entities.Category;
 import com.mbsoft.webstore.entities.Product;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -19,6 +20,11 @@ public interface ProductService {
     List<Product> getProductsByManufacturer(String manufacturer);
 
     Set<Product> getProductsByFilter(Map<String, List<String>> filterParams);
+
+    //Set<Product> getProductsByPriceFilter(Map<String, BigDecimal> priceFilterParams);
+
+    List<Product> getProductsByPriceFilter(BigDecimal low, BigDecimal high);
+
 
 }
 

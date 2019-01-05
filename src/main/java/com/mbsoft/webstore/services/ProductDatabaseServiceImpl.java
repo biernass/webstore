@@ -7,6 +7,7 @@ import com.mbsoft.webstore.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -66,6 +67,7 @@ public class ProductDatabaseServiceImpl implements ProductService {
     public Set<Product> getProductsByFilter(Map<String, List<String>> filterParams) {
         Set<Product> productsByBrand = new HashSet<>();
         Set<Product> productsByCategory = new HashSet<>();
+        Set<Product> productsByPrice = new HashSet<>();
         Set<String> criterias = filterParams.keySet();
         if (criterias.contains("brand")) {
             for (String brandName : filterParams.get("brand")) {
@@ -83,8 +85,32 @@ public class ProductDatabaseServiceImpl implements ProductService {
         return productsByCategory;
     }
 
+    @Override
+    public List<Product> getProductsByPriceFilter(BigDecimal low, BigDecimal high) {
+        Iterable<Product> productIterable = productRepository.findProductsByUnitPriceBetween(low, high);
 
+        List<Product> productList = StreamSupport.stream(productIterable.spliterator(), true)
+                .collect(Collectors.toList());
+
+        if (productList.size() == 0) {
+            throw new IllegalArgumentException("Nie znaleziono przedmiotów z podanego zakresu cenowego: " + low + " " + high);
+        }
+        return productList;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

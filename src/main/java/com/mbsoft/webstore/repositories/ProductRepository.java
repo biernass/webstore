@@ -6,6 +6,7 @@ import com.mbsoft.webstore.entities.Product;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -17,6 +18,7 @@ public interface ProductRepository extends CrudRepository<Product, Long> {
 
     List<Product> findProductsByManufacturer(Manufacturer manufacturer);
 
+    List<Product> findProductsByUnitPriceBetween(BigDecimal low, BigDecimal high);
 
 }
 
