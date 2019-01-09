@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long productId;
 
     private String name;
@@ -28,8 +28,8 @@ public class Product {
 
     private Long unitsInOrder;
 
-    @Column(nullable = false)
-    private Boolean discounted;
+    @Column(nullable = true)
+    private Boolean discontinued;
 
     @Column(name = "[condition]")
     private String condition;
@@ -62,8 +62,8 @@ public class Product {
         return manufacturer;
     }
 
-    public Boolean getDiscounted() {
-        return discounted;
+    public Boolean getDiscontinued() {
+        return discontinued;
     }
 
     public Long getUnitsInStock() {
@@ -74,9 +74,9 @@ public class Product {
         return unitsInOrder;
     }
 
-    public boolean isDiscounted() {
-        return discounted;
-    }
+//    public boolean isDiscontinued() {
+//        return discontinued;
+//    }
 
     public String getCondition() {
         return condition;
@@ -84,6 +84,38 @@ public class Product {
 
     public void setUnitsInStock(Long unitsInStock) {
         this.unitsInStock = unitsInStock;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setUnitPrice(BigDecimal unitPrice) {
+        this.unitPrice = unitPrice;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setManufacturer(Manufacturer manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public void setUnitsInOrder(Long unitsInOrder) {
+        this.unitsInOrder = unitsInOrder;
+    }
+
+    public void setDiscontinued(Boolean discontinued) {
+        this.discontinued = discontinued;
+    }
+
+    public void setCondition(String condition) {
+        this.condition = condition;
     }
 
     public Category getCategory() {

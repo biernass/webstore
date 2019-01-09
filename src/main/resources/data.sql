@@ -1,13 +1,13 @@
-INSERT INTO products(product_id, category, description, manufacturer, name,unit_price, units_in_stock, discounted)
+INSERT INTO products(product_id, category, description, manufacturer, name,unit_price, units_in_stock, discontinued)
  VALUES (1, 'SMARTFON', 'Opis pierwszego przedmiotu Opis pierwszego przedmiotu','APPLE', 'iPhone 6S',100, 200, false );
 
-INSERT INTO products(product_id, category, description, manufacturer, name,unit_price, units_in_stock, discounted)
+INSERT INTO products(product_id, category, description, manufacturer, name,unit_price, units_in_stock, discontinued)
  VALUES (2, 'SMARTFON', 'Opis drugiego przedmiotu Opis drugiego przedmiotu','LG', 'LG Jakiś',800, 200, false );
 
-INSERT INTO products(product_id, category, description, manufacturer, name,unit_price, units_in_stock, discounted)
+INSERT INTO products(product_id, category, description, manufacturer, name,unit_price, units_in_stock, discontinued)
  VALUES (3, 'SMARTFON', 'Opis trzeciego przedmiotu Opis trzeciego przedmiotu','SAMSUNG', 'GALAXY S9',1000, 200, false );
 
-INSERT INTO products(product_id, category, description, manufacturer, name,unit_price, units_in_stock, discounted)
+INSERT INTO products(product_id, category, description, manufacturer, name,unit_price, units_in_stock, discontinued)
  VALUES (4, 'TABLET', 'Opis czwartego przedmiotu Opis czwartego przedmiotu','SAMSUNG', 'GALAXY NOTE',1500, 200, false );
 
 INSERT INTO address(address_id, street, number, city, zip_code)
