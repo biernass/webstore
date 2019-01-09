@@ -97,6 +97,11 @@ public class ProductDatabaseServiceImpl implements ProductService {
         }
         return productList;
     }
+
+    @Override
+    public void addProduct(Product product) {
+        productRepository.save(product);
+    }
 }
 
 

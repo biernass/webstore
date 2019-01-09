@@ -21,9 +21,9 @@ public interface ProductService {
 
     Set<Product> getProductsByFilter(Map<String, List<String>> filterParams);
 
-    //Set<Product> getProductsByPriceFilter(Map<String, BigDecimal> priceFilterParams);
-
     List<Product> getProductsByPriceFilter(BigDecimal low, BigDecimal high);
+
+    void addProduct(Product product);
 
 
 }
